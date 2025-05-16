@@ -50,6 +50,7 @@ header {
   justify-content: center;
   height: 100%;
   width: 50%;
+  margin-left: 20px;
 }
 
 .header-content h1 {
@@ -66,7 +67,14 @@ header {
 }
 
 .header-content nav {
-margin-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
 }
 .header-content nav a {
   font-family: var(--font-titulo);
@@ -133,5 +141,21 @@ main {
 }
 .adv-img:hover {
   transform: scale(1.05);
+}
+
+
+.servicos-content ul li {
+  list-style: none;
+  font-family: var(--font-texto);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+  
 }
 
