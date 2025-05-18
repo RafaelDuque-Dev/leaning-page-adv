@@ -42,6 +42,7 @@ header {
   border-bottom: 3px solid var(--color-primary);
   width: 100%;
   height: 500px;
+  transition: all 0.5s ease;
 }
 .header-content {
   display: flex;
@@ -100,7 +101,6 @@ main {
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 1300px;
 }
 
 .subtitulos {
@@ -144,10 +144,31 @@ main {
 }
 
 
+.servicos-content {
+  background-image: url(img/interior-de-espaco-de-escritorio-moderno.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 600px;
+}
+
+.servicos-content ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: auto;
+}
+
 .servicos-content ul li {
   list-style: none;
   font-family: var(--font-texto);
-  font-size: 1.2rem;
+  font-size: 2rem;
   line-height: 1.5;
   border: 1px solid var(--color-primary);
   border-radius: 10px;
@@ -155,7 +176,20 @@ main {
   height: 300px;
   padding: 10px;
   text-align: center;
-  margin: 20px;
-  
+  margin: 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
 }
 
+.servicos-content ul li:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  transition: all 0.5s ease;
+}
+
+.contato-content {
+  height: 500px;
+}
