@@ -4,10 +4,14 @@
 }
 
 :root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
   --color-primary: #DFD0B8;
   --color-secondary: #948979;
   --color-tertiary: #3C5B6F;
   --color-background: #153448;
+  --color-degrade:linear-gradient(to left, #153448, #091720);
+
 
   --font-titulo: 'ROMANUS', sans-serif;
   --font-texto: 'Arial', sans-serif;
@@ -24,26 +28,71 @@ html {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-image: linear-gradient(to top, var(--color-background), #000);
+
+  background-image: url(img/background.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: #fff;
 }
 
-header {
+.link-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.link-whatsapp img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.link-whatsapp:hover {
+  transform: scale(1.20);
+}
+
+.link-whatsapp-text {
+  background-image: linear-gradient(to right, #3f8f41, #2a5f2c);
+  border-radius: 50px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-white);
+  font-family: var(--font-texto);
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  transition: transform 0.3s ease;
+}
+
+.link-whatsapp-text img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.link-whatsapp-text:hover {
+  transform: scale(1.05);
+}
+
+
+.header-content {
   background-image: url(img/img-header3.jpg);
   background-size: cover;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  background-color: rgba(0, 0, 0, 0.678);
+  background-color: rgba(0, 0, 0, 0.781);
   border-bottom: 3px solid var(--color-primary);
+
   width: 100%;
   height: auto;
-  min-height: 600px;
-  transition: all 0.5s ease;
+  min-height: 800px;
+  padding: 0 5%;
 
   display: flex;
   flex-direction: column;
@@ -51,28 +100,46 @@ header {
   justify-content: center;
 }
 
-.header-content h1 {
+
+.header-content_title {
   font-family: var(--font-titulo);
-  font-size: 4rem;
+  font-size: 4.5rem;
   color: var(--color-primary);
-  letter-spacing: 5px; 
+  letter-spacing: 6px; 
+  font-weight: 900; 
+  text-shadow: 2px 2px 8px #000, 0 0 2px #000; 
 }
 
-.header-content-text {
+.header-content_subtitle {
   font-family: var(--font-titulo);
   font-size: 3rem;
   font-weight: bold;
   color: var(--color-secondary);
   text-align: center;
   letter-spacing: 3px; 
+  text-shadow: 1px 1px 6px #000, 0 0 2px #000;
 }
 
-.boas-vindas {
+.header-content_welcome,
+.header-content_welcome_extra {
+  text-shadow: 1px 1px 6px #000, 0 0 2px #000;
+  font-weight: 600;
+}
+
+.header-content_welcome {
   padding: 20px;
   text-align: center;
   font-family: var(--font-texto);
   font-size: 2.5rem;
   margin: 10px 20px;
+  color: var(--color-white)
+}
+
+.header-content_welcome_extra {
+  font-family: var(--font-texto);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-top: 10px;
 }
 
 
@@ -82,20 +149,15 @@ main {
   margin: auto;
 }
 
-.subtitulos {
-  font-family: var(--font-titulo);
-  font-size: 3rem;
-  letter-spacing: 5px; 
-  color: var(--color-primary);
-  text-align: center;
-  margin: 40px 0;
-}
 
 .sobre-content {
   display: flex;
   flex-direction: row;
   padding: 50px;
   margin: auto;
+  background-image: var(--color-degrade);
+  border-: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
 }
 
 .sobre-text {
@@ -125,53 +187,14 @@ main {
   transform: scale(1.05);
 }
 
-
 .servicos-content {
-  background-image: url(img/interior-de-espaco-de-escritorio-moderno.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.6);
-  height: 600px;
+  height: 800px
 }
 
-.servicos-content ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin: auto;
-}
-
-.servicos-content ul li {
-  list-style: none;
-  font-family: var(--font-texto);
-  font-size: 2rem;
-  line-height: 1.5;
-  border: 1px solid var(--color-primary);
-  border-radius: 10px;
-  width: 300px;
-  height: 300px;
-  padding: 10px;
-  text-align: center;
-  margin: 20px; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-primary);
-}
-
-.servicos-content ul li:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-background);
-  transition: all 0.5s ease;
+.sobre-content {
+  height: 600px
 }
 
 .contato-content {
-  height: 500px;
+  height: 400px;
 }
