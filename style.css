@@ -285,17 +285,80 @@ main {
   padding: 30px;
   max-width: 1600px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .contact-content h2 {
   font-family: var(--font-title);
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--color-background);
   margin-bottom: 20px;
   letter-spacing: 5px;
-  font-weight: bold;
+  font-weight: bold; 
+}
+.contact-content p {
+  font-family: var(--font-texto);
+  font-size: 1.2rem;
+  color: var(--color-background);
 }
 
+.contact-email {
+  font-family: var(--font-texto);
+  font-size: 1.2rem;
+  color: var(--color-black);  
+}
+
+.contact-number {
+  font-family: var(--font-texto);
+  font-size: 1.2rem;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.link-whatsapp-contact {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-image: linear-gradient(to right, #3f8f41, #2a5f2c);
+  border-radius: 50px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--color-white);
+  font-family: var(--font-texto);
+  font-size: 1.5rem;
+  width: fit-content;
+}
+.link-whatsapp-contact img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.link-whatsapp-contact:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: var(--color-background);
+  color: var(--color-white);
+  text-align: center;
+  padding: 20px;
+  font-family: var(--font-texto);
+  font-size: 1.2rem;
+}
+
+.footer-text {
+  margin: 10px 0;
+}
+
+ .footer-text > a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bolder;
+}
 
 
 @media (max-width: 1000px) {
@@ -307,4 +370,5 @@ main {
     max-width: 100%;
   }
 }
+
 
