@@ -382,12 +382,14 @@ footer {
 
 
 @media (max-width: 768px) {
-  .body {
-    background-image: var(--color-degrade);
+  body {
+    background-attachment: scroll;:
   }
+
   .header-content {
     padding: 10px 5%;
     text-align: center;
+    background-attachment: scroll;
   }
   
   .header-title {
