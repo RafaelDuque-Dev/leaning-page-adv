@@ -438,6 +438,21 @@ footer {
     margin: 20px auto;
   }
 
+  .contact-content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contact-content a {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .link-whatsapp-contact {
+    width: 100%;
+    justify-content: center;
+  }
+
+
   .footer-text {
     font-size: 1rem;
   }
