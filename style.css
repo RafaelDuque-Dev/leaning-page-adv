@@ -479,4 +479,23 @@ footer {
   .footer-text {
     font-size: 1rem;
   }
+
+  .link-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.link-whatsapp img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.link-whatsapp:hover {
+  transform: scale(1.20);
+}
 }
